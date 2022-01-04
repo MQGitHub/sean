@@ -1,199 +1,163 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <title></title>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <meta name="robots" content="noindex, nofollow">
-  <meta name="googlebot" content="noindex, nofollow">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 
+<style>
 
-  <script
-    type="text/javascript"
-    src="//code.jquery.com/jquery-1.8.3.js"
-    
-  ></script>
-    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
-
-    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
-
-
-  <style id="compiled-css" type="text/css">
-      * {
+* {
    cursor: url(https://christofmigone.ca/cm/wp-content/uploads/sites/4/2016/05/6.png), auto;
-   /*cursor: none;*/
-   font-family: Helvetica, sans-serif;	      
 }
 
-
-
-
-li {
-  animation: blinker 3s linear infinite;	
-  color: rgb(201, 68, 111);
-  display: inline-block;
-  margin: 0 -5px;
-  transition: 1s ease-in-out 0.45s;
+* {
+	margin: 0;
+	padding: 0;
 }
-
-li:hover {
-    transition: 0s ease-in-out 0s; 
-    opacity: 0;
+.imgbox {
+	display: grid;
+	height: 100%;
 }
-
-@keyframes blinker {  
-  50% { opacity: 0; }
+.center-fit {
+	max-width: 100%;
+	max-height: 100vh;
+	margin: auto;
 }
+    </style>
 
-div.static {
-  text-decoration: none;
-  position: fixed;
-  top: 100px;
-  left: 100px;
-  background: rgb(255, 253, 242);
-  animation: glow 1s ease-in-out 0.45s infinite alternate;
-}
+<body style="background-color: rgb(255, 253, 242);">
 
-@keyframes glow {
-    to {
-        text-shadow: 0 0 10px red;
-    }
-}
-
-
-a:link {
-  color: rgb(201, 68, 111);
-  background-color: transparent;
-  text-decoration: none;
-}
-a:visited {
-  color: pink;
-  background-color: transparent;
-  text-decoration: none;
-}
-a:hover {
-  color: black;
-  background-color: transparent;
-  text-decoration: none;
-}
-a:active {
-  color: yellow;
-  background-color: transparent;
-  text-decoration: none;
-}
-
-body {
-	font-family: Georgia, serif;
-	background-color: rgb(255, 253, 242);
-}
-
-div.new {
-  display: none;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-classname {
-    -webkit-transition: opacity 2.0s ease-in;
-       -moz-transition: opacity 2.0s ease-in;
-         -o-transition: opacity 2.0s ease-in;
-                                      opacity: 1;
-    /* EOS */
-    /* EOS */
-  </style>
-
-  <script id="insert"></script>
-
-
-</head>
-<body>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-<div id="mouse">
-<div id="spam">
-<ul>
-</ul>
-</div>
-</div>
-
-<div id="su" class="static" >
-<a title="Click to do something"
- href="#" >Dissapearing</a>
-</div>
-
-<div id="mq" class="static" style="top:200px; left:300px">
-<a title="Click to do something"
- href="#" >Utter</a>
-</div>
-
-<div id="mmq" class="static" style="top:100px; left:400px">
-<a title="Click to do something"
- href="#" >Blow-Up</a>
-</div>
-
-<div id="mqq" class="static" style="top:250px; left:250px">
-<a title="Click to do something"
- href="#" >Loop</a>
-</div>
-
-<div id="mqqq" class="static" style="top:200px; left:600px">
-<a title="Click to do something"
- href="#" >Matrix</a>
-</div>
-
-<audio controls autoplay>
-  <source src="https://t4.bcbits.com/stream/d6bc32254d107eff7f9a2c5f163b46df/mp3-128/2163122105?p=0&ts=1639527704&t=bd5f6dfa22e51a2025114d6d535099b421ddb5f3&token=1639527704_591a0eb8bcb06468c0474e7bcc3f45827ba9bf68" type="audio/mpeg">
-  Your browser does not support the audio element.
+<div class="imgbox">
+<audio id="audio1" src="https://github.com/MQGitHub/sean/blob/main/audio_/1a.m4a?raw=true" preload="auto">
 </audio>
+<button onclick="togglePlay(audio1)"><img class="center-fit" src="https://raw.githubusercontent.com/MQGitHub/sean/main/Booklet a1-5.docx-1.png"></button>
+</div>
 
 
+<div class="imgbox">
+<audio id="audio2" src="https://github.com/MQGitHub/sean/blob/main/audio_/1b.m4a?raw=true" preload="auto">
+</audio>
+<button onclick="togglePlay(audio2)"><img class="center-fit" src="https://raw.githubusercontent.com/MQGitHub/sean/main/fff.png"></button>
+</div>
 
 
-
-    <script type="text/javascript">//<![CDATA[
-
-
-
-function randomtext() {
-  var words = ['', 'Loop', 'Fragment', 'Ambiguity', 'Start', 'Wandering', 'Eros', 'Utter', 'Un-utter', 'Suffocate', 'Vomit', 'Empherambility', 'Fragmented', 'Marginality', 'artifact', 'disappearing', 'Process', 'Proof', 'Itteration', 'Mechanism', 'Blow-up', 'Repetition', 'Space', 'Virtual', 'Intertext', 'Matrix']
-;
-
-  return words[Math.floor((Math.random() * words.length))];
-}
-
-for (var i = 0; i < 1500; i++) {
-  var node = document.createElement("LI");
-  var textnode = document.createTextNode(randomtext());
-  node.appendChild(textnode);
-  document.getElementById("spam").appendChild(node);
-}
-
-function MyFunction() {
-  var x = document.getElementById("spam");
-    x.style.display = "none";
-  $( ".static" ).css( "display", "none" );
-
-  document.getElementById('img').className = 'classname';
-}
+<div class="imgbox">
+<audio id="audio3" src="https://github.com/MQGitHub/sean/blob/main/audio_/1c.m4a?raw=true" preload="auto">
+</audio>
+<button onclick="togglePlay(audio3)"><img class="center-fit" src="https://raw.githubusercontent.com/MQGitHub/sean/main/Booklet b1-5.docx-1.png"></button>
+</div>
 
 
+<div class="imgbox">
+<audio id="audio4" src="https://github.com/MQGitHub/sean/blob/main/audio_/1d.m4a?raw=true" preload="auto">
+</audio>
+<button onclick="togglePlay(audio4)"><img class="center-fit" src="https://raw.githubusercontent.com/MQGitHub/sean/main/fff.png"></button>
+</div>
 
 
-  //]]></script>
+<div class="imgbox">
+<audio id="audio5" src="https://github.com/MQGitHub/sean/blob/main/audio_/2a.m4a?raw=true" preload="auto">
+</audio>
+<button onclick="togglePlay(audio5)"><img class="center-fit" src="https://raw.githubusercontent.com/MQGitHub/sean/main/Booklet c1-5.docx-1.png"></button>
+</div>
 
-  <script>
-    // tell the embed parent frame the height of the content
-    if (window.parent && window.parent.parent){
-      window.parent.parent.postMessage(["resultsFrame", {
-        height: document.body.getBoundingClientRect().height,
-        slug: "4zv628p5"
-      }], "*")
-    }
 
-    // always overwrite window.name, in case users try to set it manually
-    window.name = "result"
-  </script>
+<div class="imgbox">
+<audio id="audio6" src="https://github.com/MQGitHub/sean/blob/main/audio_/2b.m4a?raw=true" preload="auto">
+</audio>
+<button onclick="togglePlay(audio6)"><img class="center-fit" src="https://raw.githubusercontent.com/MQGitHub/sean/main/fff.png"></button>
+</div>
 
+
+<div class="imgbox">
+<audio id="audio7" src="https://github.com/MQGitHub/sean/blob/main/audio_/2c.m4a?raw=true" preload="auto">
+</audio>
+<button onclick="togglePlay(audio7)"><img class="center-fit" src="https://raw.githubusercontent.com/MQGitHub/sean/main/Booklet d1-5-1.png"></button>
+</div>
+
+
+<div class="imgbox">
+<audio id="audio8" src="https://github.com/MQGitHub/sean/blob/main/audio_/2d.m4a?raw=true" preload="auto">
+</audio>
+<button onclick="togglePlay(audio8)"><img class="center-fit" src="https://raw.githubusercontent.com/MQGitHub/sean/main/fff.png"></button>
+</div>
+
+
+<div class="imgbox">
+<audio id="audio9" src="https://github.com/MQGitHub/sean/blob/main/audio_/3a.m4a?raw=true" preload="auto">
+</audio>
+<button onclick="togglePlay(audio9)"><img class="center-fit" src="https://raw.githubusercontent.com/MQGitHub/sean/main/Booklet e1-5-1.png"></button>
+</div>
+
+
+<div class="imgbox">
+<audio id="audio10" src="https://github.com/MQGitHub/sean/blob/main/audio_/3b.m4a?raw=true" preload="auto">
+</audio>
+<button onclick="togglePlay(audio10)"><img class="center-fit" src="https://raw.githubusercontent.com/MQGitHub/sean/main/fff.png"></button>
+</div>
+
+
+<div class="imgbox">
+<audio id="audio11" src="https://github.com/MQGitHub/sean/blob/main/audio_/3c.m4a?raw=true" preload="auto">
+</audio>
+<button onclick="togglePlay(audio11)"><img class="center-fit" src="https://raw.githubusercontent.com/MQGitHub/sean/main/Booklet f1-3.docx-1.png"></button>
+</div>
+
+
+<div class="imgbox">
+<audio id="audio12" src="https://github.com/MQGitHub/sean/blob/main/audio_/3d.m4a?raw=true" preload="auto">
+</audio>
+<button onclick="togglePlay(audio12)"><img class="center-fit" src="https://raw.githubusercontent.com/MQGitHub/sean/main/fff.png"></button>
+</div>
+
+
+<div class="imgbox">
+<audio id="audio13" src="https://github.com/MQGitHub/sean/blob/main/audio_/4a.m4a?raw=true" preload="auto">
+</audio>
+<button onclick="togglePlay(audio13)"><img class="center-fit" src="https://raw.githubusercontent.com/MQGitHub/sean/main/Booklet V1a-d.docx-1.png"></button>
+</div>
+
+
+<div class="imgbox">
+<audio id="audio14" src="https://github.com/MQGitHub/sean/blob/main/audio_/4b.m4a?raw=true" preload="auto">
+</audio>
+<button onclick="togglePlay(audio14)"><img class="center-fit" src="https://raw.githubusercontent.com/MQGitHub/sean/main/fff.png"></button>
+</div>
+
+
+<div class="imgbox">
+<audio id="audio15" src="https://github.com/MQGitHub/sean/blob/main/audio_/4c.m4a?raw=true" preload="auto">
+</audio>
+<button onclick="togglePlay(audio15)"><img class="center-fit" src="https://raw.githubusercontent.com/MQGitHub/sean/main/Booklet V2a-d.docx-1.png"></button>
+</div>
+
+
+<div class="imgbox">
+<audio id="audio16" src="https://github.com/MQGitHub/sean/blob/main/audio_/5a.m4a?raw=true" preload="auto">
+</audio>
+<button onclick="togglePlay(audio16)"><img class="center-fit" src="https://raw.githubusercontent.com/MQGitHub/sean/main/Booklet V3a-d.docx-1.png"></button>
+</div>
+
+
+<div class="imgbox">
+<audio id="audio17" src="https://github.com/MQGitHub/sean/blob/main/audio_/5b.m4a?raw=true" preload="auto">
+</audio>
+<button onclick="togglePlay(audio17)"><img class="center-fit" src="https://raw.githubusercontent.com/MQGitHub/sean/main/Booklet V4a-d.docx-1.png"></button>
+</div>
+
+
+<div class="imgbox">
+<audio id="audio18" src="https://github.com/MQGitHub/sean/blob/main/audio_/5c.m4a?raw=true" preload="auto">
+</audio>
+<button onclick="togglePlay(audio18)"><img class="center-fit" src="https://raw.githubusercontent.com/MQGitHub/sean/main/Booklet V5a-d.docx-1.png"></button>
+</div>
 
 </body>
+<script>
+
+
+function togglePlay(x) {
+var sounds = document.getElementsByTagName('audio');
+  for(i=0; i<sounds.length; i++) sounds[i].pause();
+  return x.paused ? x.play() : x.pause();
+};
+</script> 
+
 </html>
